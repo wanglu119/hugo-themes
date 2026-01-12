@@ -3,7 +3,7 @@
   <div class="header-title">
 	  <!-- <a href="{{ .Site.LanguagePrefix }}/" -->
     <a href="{{ .Site.BaseURL }}/">
-      {{ or .Site.Params.headTitle .Site.Author.name }}
+      {{ or .Site.Params.headTitle .Site.Params.Author.name }}
     </a>
   </div>
   <div class="header-subtitle">{{ .Site.Params.Description }}</div>
