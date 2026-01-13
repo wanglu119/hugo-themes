@@ -10,14 +10,14 @@
 
         <h1 class="taxonomy-term">{{.Data.Term}}</h1>
         <div id="posts-list">
-          {{ range (where .Data.Pages "Type" "in" site.Params.mainSections).GroupByDate "2006" -}}
+          {{ range .Data.Pages.GroupByDate "2006" -}}
           <section>
             <h1 class="site-date-catalog">{{ .Key }}</h1>
 
             {{ range .Pages }}
             <div class="row posts-line">
               <div class="posts-date col-xs-2">
-                <time datetime="{{ .Date.Format "2006-01-02 15:04:05 MST" }}">{{ .Date.Format "02 Jan"}}</time>
+                <time datetime="{{ .Date.Format "2006-01-02 15:04:05 MST" }}">{{ .Date.Format "01月02"}}</time>
               </div>
               <div class="posts-title col-xs-10">
                 <div class="row">
